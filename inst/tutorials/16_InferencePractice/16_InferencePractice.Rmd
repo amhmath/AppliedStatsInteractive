@@ -23,11 +23,11 @@ tutorial_options(exercise.timelimit = 60, exercise.checker = gradethis::grade_le
 
 ## Inference Practice
 
-###
+
 
 In this workbook, you'll have an opportunity to practice a set of problems. I'm still providing you with a set of guided questions for each problem. Think about the guiding questions and steps necessary to complete each task so that you will be prepared to approach similar problems on your own, without this scaffolding. On the associated homework problems you'll need to come up with these steps on your own. This workbook should prepare you for that.
 
-###
+
 
 For convenience, here is the [*standard errror decision tree*](www/StdErrorDecisionTree.pdf){target="_blank"}. For any problems involving hypothesis tests, assume the $\alpha = 0.05$ level of significance unless otherwise stated.
 
@@ -46,8 +46,6 @@ question_radio(
   random_answer_order = TRUE
 )
 ```
-
-###
 
 ```{r prob1-2, echo = FALSE}
 question_radio(
@@ -69,8 +67,6 @@ question_radio(
   random_answer_order = TRUE
 )
 ```
-
-###
 
 ```{r prob1-4, echo = FALSE}
 quiz(
@@ -101,7 +97,8 @@ quiz(
 
 ###
 
-Use the code block below to compute the probability of observing a random sample of 45 hens from this species which lays an average of at least 37 eggs.
+Use the code block below to compute the probability of observing a random sample of 45 hens from this species which lays an average of at least 37 eggs.  
+Recall, <span class="math inline">\(\mu=35\)</span> and <span class="math inline">\(\sigma=18.2\)</span>.
 ```{r prob1-5, exercise = TRUE}
 
 ```
@@ -124,7 +121,6 @@ s & 4.5 & 6.2 \\ \hline \end{array}$
 
 Conduct a hypothesis test to determine whether there is evidence to suggest that the men on Death Row are, on average, younger than women on Death Row. (In case of emergency, [see worked solution here](www/SampleInferenceDeathRow.pdf){target="_blank"})
 
-###
 
 ```{r prob2-1, echo = FALSE}
 question_radio(
@@ -138,8 +134,6 @@ question_radio(
 )
 ```
 
-###
-
 ```{r prob2-2, echo = FALSE}
 question_radio(
   "What is the level of significance associated with this test?",
@@ -152,11 +146,10 @@ question_radio(
 )
 ```
 
-###
 
 ```{r prob2-3, echo = FALSE}
 question_radio(
-  "Does this hypothesis test involve testing a statement about the mean ($\\mu$), a proportion ($p$), or something else?",
+  "Does this hypothesis test involve testing a statement about the mean $\\mu$, a proportion $p$, or something else?",
   answer("One or more means", correct = TRUE),
   answer("One or more proportions"),
   answer("Something else altogether"),
@@ -165,7 +158,6 @@ question_radio(
 )
 ```
 
-###
 
 ```{r prob2-4, echo = FALSE}
 question_radio(
@@ -178,7 +170,6 @@ question_radio(
 )
 ```
 
-###
 
 ```{r prob2-5, echo = FALSE}
 question_radio(
@@ -192,11 +183,10 @@ question_radio(
 )
 ```
 
-###
 
 ```{r prob2-6, echo = FALSE}
 question_radio(
-  "Do we know the population standard deviation(s), $\\sigma$, for age in each group?",
+  "Do we know the population standard deviation(s), $\\sigma_i$, for age in each group?",
   answer("Yes, the population standard deviations are known.", message = "Oops. We are presented with a standard deviation in ages for each group, but those standard deviations belong only to the ages measured in each sample, not the population."),
   answer("No, the population standard deviations are not known.", correct = TRUE),
   allow_retry = TRUE,
@@ -204,7 +194,6 @@ question_radio(
 )
 ```
 
-###
 
 ```{r prob2-7, echo = FALSE}
 question_radio(
@@ -216,7 +205,7 @@ question_radio(
 )
 ```
 
-###
+
 
 ```{r prob2-8, echo = FALSE}
 quiz(
@@ -247,7 +236,17 @@ quiz(
 
 ###
 
-Now we'll begin building the test statistic. Use the code block below to input or compute the point estimate for our population parameter.
+Recall, we sampled 9 women and 14 men and found:
+
+
+<center>
+$\begin{array}{|c|c|c|} \hline & \text{Men} & \text{Women} \\ \hline
+\bar{x} & 39 & 44\\ \hline
+s & 4.5 & 6.2 \\ \hline \end{array}$
+</center>
+
+Now we'll begin building the test statistic. Use the code block below to input or compute the point estimate for our population parameter. 
+
 ```{r prob2-9, exercise = TRUE}
 
 ```
@@ -258,7 +257,6 @@ grade_result(
 )
 ```
 
-###
 
 Use the code block below to input or compute the null value.
 ```{r prob2-10, exercise = TRUE}
@@ -271,7 +269,6 @@ grade_result(
 )
 ```
 
-###
 
 Use the code block below to input or compute the standard error.
 ```{r prob2-11, exercise = TRUE}
@@ -284,7 +281,6 @@ grade_result(
 )
 ```
 
-###
 
 Use the code block below to input or compute the test statistic.
 ```{r prob2-12, exercise = TRUE}
@@ -297,7 +293,6 @@ grade_result(
 )
 ```
 
-###
 
 Use the code block below to compute the $p$-value associated with this test.
 ```{r prob2-13, exercise = TRUE}
@@ -342,7 +337,6 @@ quiz(
 
 **Problem 3:** A recent random sample of 30 customers who switched to a car insurance company boasting that new customers save an average of \$534 per year resulted in an average savings of \$525 with a standard deviation of \$40. Find a 90% confidence interval for the true mean savings of customers switching to this company. (In case of emergency, [see worked solution here](www/SampleInferenceCarInsurance.pdf){target="_blank"})
 
-###
 
 ```{r prob3-1, echo = FALSE}
 question_radio(
@@ -356,7 +350,6 @@ question_radio(
 )
 ```
 
-###
 
 ```{r prob3-2, echo = FALSE}
 question_radio(
@@ -370,11 +363,10 @@ question_radio(
 )
 ```
 
-###
 
 ```{r prob3-3, echo = FALSE}
 question_radio(
-  "Is your confidence interval being build to capture a mean ($\\mu$), a proportion ($p$), or something else?",
+  "Is your confidence interval being built to capture a mean $\\mu$, a proportion $p$, or something else?",
   answer("A mean or difference in means", correct = TRUE),
   answer("A proportion or difference in proportions"),
   answer("Something else altogether"),
@@ -383,7 +375,6 @@ question_radio(
 )
 ```
 
-###
 
 ```{r prob3-4, echo = FALSE}
 question_radio(
@@ -398,7 +389,7 @@ question_radio(
 
 ```{r prob3-5, echo = FALSE}
 question_radio(
-  "Do we know the population standard deviation ($\\sigma$) for dollars saved?",
+  "Do we know the population standard deviation $\\sigma$ for dollars saved?",
   answer("Yes, the population standard deviation is known.", message = "Oops. We are presented with a standard deviation in savings but that standard deviation belongs only to the observations in the sample, not the entire population."),
   answer("No, the population standard deviation is not known.", correct = TRUE),
   allow_retry = TRUE,
@@ -406,7 +397,7 @@ question_radio(
 )
 ```
 
-###
+
 
 ```{r prob3-6, echo = FALSE}
 quiz(
@@ -448,7 +439,6 @@ grade_result(
 )
 ```
 
-###
 
 Use the code block below to input or compute the point estimate.
 ```{r prob3-8, exercise = TRUE}
@@ -461,7 +451,6 @@ grade_result(
 )
 ```
 
-###
 
 Use the code block below to input or compute the standard error.
 ```{r prob3-9, exercise = TRUE}
@@ -474,7 +463,6 @@ grade_result(
 )
 ```
 
-###
 
 Use the code block below to compute the lower bound for our confidence interval.
 ```{r prob3-10, exercise = TRUE}
@@ -487,7 +475,6 @@ grade_result(
 )
 ```
 
-###
 
 Use the code block below to compute the upper bound for our confidence interval.
 ```{r prob3-11, exercise = TRUE}
@@ -518,7 +505,6 @@ question_radio(
 
 **Problem 4:** In January 2011, The Marist Poll published a report stating that 66% of adults nationally think licensed drivers should be required to retake their road test once they reach 65 years of age. In that same year, 200 random citizens of New Hampshire were asked whether they were in favor of an additional road test for drivers at 65 years of age, 118 responded that they were in favor. Construct a 95% confidence interval for the true proportion of New Hampshirites who are in favor of this proposal. (In case of emergency, [see worked solution here](www/SampleInferenceMaristPoll.pdf){target="_blank"} -- you're on your own from here on out though!)
 
-###
 
 ```{r prob4-1, echo = FALSE}
 question_radio(
@@ -532,7 +518,6 @@ question_radio(
 )
 ```
 
-###
 
 ```{r prob4-2, echo = FALSE}
 question_radio(
@@ -546,7 +531,6 @@ question_radio(
 )
 ```
 
-###
 
 ```{r prob4-3, echo = FALSE}
 question_radio(
@@ -559,7 +543,6 @@ question_radio(
 )
 ```
 
-###
 
 ```{r prob4-4, echo = FALSE}
 question_radio(
@@ -571,6 +554,8 @@ question_radio(
   random_answer_order = TRUE
 )
 ```
+
+
 
 ```{r prob4-5, echo = FALSE}
 quiz(
@@ -612,7 +597,6 @@ grade_result(
 )
 ```
 
-###
 
 Use the code block below to input or compute the point estimate.
 ```{r prob4-7, exercise = TRUE}
@@ -625,7 +609,6 @@ grade_result(
 )
 ```
 
-###
 
 Use the code block below to input or compute the standard error.
 ```{r prob4-8, exercise = TRUE}
@@ -638,7 +621,6 @@ grade_result(
 )
 ```
 
-###
 
 Use the code block below to compute the lower bound for our confidence interval.
 ```{r prob4-9, exercise = TRUE}
@@ -651,7 +633,6 @@ grade_result(
 )
 ```
 
-###
 
 Use the code block below to compute the upper bound for our confidence interval.
 ```{r prob4-10, exercise = TRUE}
@@ -682,7 +663,6 @@ question_radio(
 
 **Problem 5:** A pollster working for Pete Buttigieg is interested in identifying the proportion of registered democrats planning to vote in the NH primary for whom Mayor Pete is their first OR second choice candidate. If the pollster wants to estimate this proportion to within one percentage-point and at 95% confidence, how many voters should the pollster include in a sample if data from a focus group suggests that the proportion is near 42%?
 
-###
 
 ```{r prob5-1, echo = FALSE}
 question_radio(
@@ -696,7 +676,6 @@ question_radio(
 )
 ```
 
-###
 
 ```{r prob5-2, echo = FALSE}
 question_radio(
@@ -723,7 +702,6 @@ grade_result(
 )
 ```
 
-###
 
 Use the code block below to either input or critical value ($z_{\alpha/2}$) which should be used to compute the required sample size.
 ```{r prob5-4, exercise = TRUE}
@@ -736,7 +714,6 @@ grade_result(
 )
 ```
 
-###
 
 Use the code block below to either input or compute the value of $p$ which should be used in the calculation of required sample size.
 ```{r prob5-5, exercise = TRUE}
@@ -749,7 +726,6 @@ grade_result(
 )
 ```
 
-###
 
 Use the code block below to compute the minimum size sample the pollster could take and be within his parameters.
 ```{r prob5-6, exercise = TRUE}
@@ -767,11 +743,12 @@ grade_result(
 
 In the last problem, did you remember to round your answer up? Rounding the required sample size down results in either a loss of confidence or an increased margin of error, violating the requirements for the estimate.
 
+
+
 ## Problem 6
 
 **Problem 6:** Greece has faced a severe economic crisis since the end of 2009. A Gallup poll surveyed 1,000 randomly sampled Greeks in 2011 and found that 25% of them said they would rate their lives poorly enough to be considered suffering. Construct a 95% confidence interval for the true proportion of Greeks who are suffering.
 
-###
 
 ```{r prob6-1, echo = FALSE}
 question_radio(
@@ -785,7 +762,6 @@ question_radio(
 )
 ```
 
-###
 
 ```{r prob6-2, echo = FALSE}
 question_radio(
@@ -799,11 +775,10 @@ question_radio(
 )
 ```
 
-###
 
 ```{r prob6-3, echo = FALSE}
 question_radio(
-  "Is your confidence interval being build to capture a mean ($\\mu$), a proportion ($p$), or something else?",
+  "Is your confidence interval being build to capture a mean $\\mu$, a proportion $p$, or something else?",
   answer("A mean or difference in means"),
   answer("A proportion or difference in proportions", correct = TRUE),
   answer("Something else altogether"),
@@ -812,7 +787,6 @@ question_radio(
 )
 ```
 
-###
 
 ```{r prob6-4, echo = FALSE}
 question_radio(
@@ -824,6 +798,7 @@ question_radio(
   random_answer_order = TRUE
 )
 ```
+
 
 ```{r prob6-5, echo = FALSE}
 quiz(
@@ -865,7 +840,7 @@ grade_result(
 )
 ```
 
-###
+
 
 Use the code block below to input or compute the point estimate.
 ```{r prob6-7, exercise = TRUE}
@@ -878,7 +853,6 @@ grade_result(
 )
 ```
 
-###
 
 Use the code block below to input or compute the standard error.
 ```{r prob6-8, exercise = TRUE}
@@ -891,7 +865,6 @@ grade_result(
 )
 ```
 
-###
 
 Use the code block below to compute the lower bound for our confidence interval.
 ```{r prob6-9, exercise = TRUE}
@@ -904,7 +877,6 @@ grade_result(
 )
 ```
 
-###
 
 Use the code block below to compute the upper bound for our confidence interval.
 ```{r prob6-10, exercise = TRUE}
@@ -943,7 +915,6 @@ question_radio(
 
 Conduct a hypothesis test to determine whether there is evidence to suggest that the proportion of individuals willing to intervene in a "bad-parenting" scenario is dependent on the gender of the child?
 
-###
 
 ```{r prob7-1, echo = FALSE}
 question_radio(
@@ -957,7 +928,6 @@ question_radio(
 )
 ```
 
-###
 
 ```{r prob7-2, echo = FALSE}
 question_radio(
@@ -971,11 +941,10 @@ question_radio(
 )
 ```
 
-###
 
 ```{r prob7-3, echo = FALSE}
 question_radio(
-  "Does this hypothesis test involve testing a statement about the mean ($\\mu$), a proportion ($p$), or something else?",
+  "Does this hypothesis test involve testing a statement about the mean $\\mu$, a proportion $p$, or something else?",
   answer("One or more means"),
   answer("One or more proportions", correct = TRUE),
   answer("Something else altogether"),
@@ -984,7 +953,6 @@ question_radio(
 )
 ```
 
-###
 
 ```{r prob7-4, echo = FALSE}
 question_radio(
@@ -997,7 +965,6 @@ question_radio(
 )
 ```
 
-###
 
 ```{r prob7-5, echo = FALSE}
 question_radio(
@@ -1011,7 +978,7 @@ question_radio(
 )
 ```
 
-###
+
 
 ```{r prob7-6, echo = FALSE}
 quiz(
@@ -1053,7 +1020,6 @@ grade_result(
 )
 ```
 
-###
 
 Use the code block below to input or compute the null value.
 ```{r prob7-8, exercise = TRUE}
@@ -1066,7 +1032,6 @@ grade_result(
 )
 ```
 
-###
 
 Use the code block below to input or compute the standard error.
 ```{r prob7-9, exercise = TRUE}
@@ -1079,7 +1044,6 @@ grade_result(
 )
 ```
 
-###
 
 Use the code block below to input or compute the test statistic.
 ```{r prob7-10, exercise = TRUE}
@@ -1092,7 +1056,6 @@ grade_result(
 )
 ```
 
-###
 
 Use the code block below to compute the $p$-value associated with this test.
 ```{r prob7-11, exercise = TRUE}
@@ -1137,7 +1100,6 @@ quiz(
 
 **Problem 8:** A University has a policy that its sports teams require no more than 15 hours per week of time commitment from players during off-season. A random survey of 12 players from the University's Quidditch team during the Fall Semester (Quidditch is a Spring Sport) resulted in a mean of 15.25 hours per week of Quidditch-related activity on average, with a standard deviation of 1 hour. Is there evidence to suggest that the University Quidditch Coach is not following University Policy? Use $\alpha = 0.10$.
 
-###
 
 ```{r prob8-1, echo = FALSE}
 question_radio(
@@ -1151,7 +1113,6 @@ question_radio(
 )
 ```
 
-###
 
 ```{r prob8-2, echo = FALSE}
 question_radio(
@@ -1165,11 +1126,10 @@ question_radio(
 )
 ```
 
-###
 
 ```{r prob8-3, echo = FALSE}
 question_radio(
-  "Does this hypothesis test involve testing a statement about the mean ($\\mu$), a proportion ($p$), or something else?",
+  "Does this hypothesis test involve testing a statement about the mean $\\mu$, a proportion $p$, or something else?",
   answer("One or more means", correct = TRUE),
   answer("One or more proportions"),
   answer("Something else altogether"),
@@ -1178,7 +1138,6 @@ question_radio(
 )
 ```
 
-###
 
 ```{r prob8-4, echo = FALSE}
 question_radio(
@@ -1191,7 +1150,6 @@ question_radio(
 )
 ```
 
-###
 
 ```{r prob8-5, echo = FALSE}
 question_radio(
@@ -1205,11 +1163,10 @@ question_radio(
 )
 ```
 
-###
 
 ```{r prob8-6, echo = FALSE}
 question_radio(
-  "Do we know the population standard deviation(s), $\\sigma$, for hours spent on Quiddich?",
+  "Do we know the population standard deviation(s) $\\sigma for hours spent on Quiddich?",
   answer("Yes, the population standard deviations are known.", message = "Oops. We are presented with a standard deviation in hours spent but that belongs to only those players included in the sample, not the entire population."),
   answer("No, the population standard deviation is not known.", correct = TRUE),
   allow_retry = TRUE,
@@ -1217,7 +1174,7 @@ question_radio(
 )
 ```
 
-###
+
 
 ```{r prob8-7, echo = FALSE}
 quiz(
@@ -1259,7 +1216,6 @@ grade_result(
 )
 ```
 
-###
 
 Use the code block below to input or compute the null value.
 ```{r prob8-9, exercise = TRUE}
@@ -1272,7 +1228,6 @@ grade_result(
 )
 ```
 
-###
 
 Use the code block below to input or compute the standard error.
 ```{r prob8-10, exercise = TRUE}
@@ -1285,7 +1240,6 @@ grade_result(
 )
 ```
 
-###
 
 Use the code block below to input or compute the test statistic.
 ```{r prob8-11, exercise = TRUE}
@@ -1298,7 +1252,6 @@ grade_result(
 )
 ```
 
-###
 
 Use the code block below to compute the $p$-value associated with this test.
 ```{r prob8-12, exercise = TRUE}
@@ -1343,7 +1296,6 @@ quiz(
 
 **Problem 9:** A market researcher wants to evaluate car insurance savings at a competing company. Based on past studies he is assuming that the standard deviation of savings is \$100. He wants to collect data such that he can get a margin of error of no more than \$10 at a 95% confidence level. How large of a sample should he collect?
 
-###
 
 ```{r prob9-1, echo = FALSE}
 question_radio(
@@ -1357,7 +1309,6 @@ question_radio(
 )
 ```
 
-###
 
 ```{r prob9-2, echo = FALSE}
 question_radio(
@@ -1371,7 +1322,6 @@ question_radio(
 )
 ```
 
-###
 
 Use the code block below to either input or compute the desired margin of error (don't include the \$ sign in your answer).
 ```{r prob9-3, exercise = TRUE}
@@ -1384,7 +1334,6 @@ grade_result(
 )
 ```
 
-###
 
 Use the code block below to either input or critical value ($z_{\alpha/2}$) which should be used to compute the required sample size.
 ```{r prob9-4, exercise = TRUE}
@@ -1397,7 +1346,6 @@ grade_result(
 )
 ```
 
-###
 
 Use the code block below to either input or compute the estimate for $\sigma$ which should be used in the calculation of required sample size (don't include the \$ sign in your response).
 ```{r prob9-5, exercise = TRUE}
@@ -1410,7 +1358,6 @@ grade_result(
 )
 ```
 
-###
 
 Use the code block below to compute the minimum size sample the pollster could take and be within his parameters.
 ```{r prob9-6, exercise = TRUE}
@@ -1423,11 +1370,12 @@ grade_result(
 )
 ```
 
+
+
 ## Problem 10
 
 **Problem 10:** A Washington Post article from 2009 reported that "support for a government-run health-care plan to compete with private insurers has rebounded from its summertime lows and wins clear majority support from the public." More specifically, the article says "seven in 10 Democrats back the plan, while almost nine in 10 Republicans oppose it. Independents divide 52 percent against, 42 percent in favor of the legislation." (6% responded with "other".) There were 819 Democrats, 566 Republicans and 783 Independents surveyed. A political pundit on TV claims that a majority of Independents oppose the health care public option plan. Do these data provide significant evidence to support this statement?
 
-###
 
 ```{r prob10-1, echo = FALSE}
 question_radio(
@@ -1441,7 +1389,6 @@ question_radio(
 )
 ```
 
-###
 
 ```{r prob10-2, echo = FALSE}
 question_radio(
@@ -1455,11 +1402,10 @@ question_radio(
 )
 ```
 
-###
 
 ```{r prob10-3, echo = FALSE}
 question_radio(
-  "Does this hypothesis test involve testing a statement about the mean ($\\mu$), a proportion ($p$), or something else?",
+  "Does this hypothesis test involve testing a statement about the mean $\\mu$, a proportion $p$, or something else?",
   answer("One or more means"),
   answer("One or more proportions", correct = TRUE),
   answer("Something else altogether"),
@@ -1468,7 +1414,6 @@ question_radio(
 )
 ```
 
-###
 
 ```{r prob10-4, echo = FALSE}
 question_radio(
@@ -1481,7 +1426,6 @@ question_radio(
 )
 ```
 
-###
 
 ```{r prob10-5, echo = FALSE}
 question_radio(
@@ -1537,7 +1481,6 @@ grade_result(
 )
 ```
 
-###
 
 Use the code block below to input or compute the null value.
 ```{r prob10-8, exercise = TRUE}
@@ -1550,7 +1493,6 @@ grade_result(
 )
 ```
 
-###
 
 Use the code block below to input or compute the standard error.
 ```{r prob10-9, exercise = TRUE}
@@ -1563,7 +1505,6 @@ grade_result(
 )
 ```
 
-###
 
 Use the code block below to input or compute the test statistic.
 ```{r prob10-10, exercise = TRUE}
@@ -1576,7 +1517,6 @@ grade_result(
 )
 ```
 
-###
 
 Use the code block below to compute the $p$-value associated with this test.
 ```{r prob10-11, exercise = TRUE}
@@ -1617,11 +1557,12 @@ quiz(
 )
 ```
 
+
+
 ## Problem 11
 
 **Problem 11:** Is there strong evidence of global warming? Let's consider a small scale example on just a single metric, comparing how temperatures have changed in the US from 1968 to 2008. The daily high temperature reading on January 1 was collected in 1968 and 2008 for 51 randomly selected locations in the continental US. Then the difference between the two readings (temperature in 2008 - temperature in 1968) was calculated for each of the 51 different locations. The average of these 51 values was 1.1 degrees with a standard deviation of 4.9 degrees. We are interested in determining whether these data provide strong evidence of temperature warming in the continental US. Conduct a hypothesis test to determine whether there is significant evidence for an increase in average temperature between 1968 and 2008.
 
-###
 
 ```{r prob11-1, echo = FALSE}
 question_radio(
@@ -1635,7 +1576,6 @@ question_radio(
 )
 ```
 
-###
 
 ```{r prob11-2, echo = FALSE}
 question_radio(
@@ -1649,11 +1589,10 @@ question_radio(
 )
 ```
 
-###
 
 ```{r prob11-3, echo = FALSE}
 question_radio(
-  "Does this hypothesis test involve testing a statement about the mean ($\\mu$), a proportion ($p$), or something else?",
+  "Does this hypothesis test involve testing a statement about the mean $\\mu$, a proportion $p$, or something else?",
   answer("One or more means", correct = TRUE),
   answer("One or more proportions"),
   answer("Something else altogether"),
@@ -1662,7 +1601,6 @@ question_radio(
 )
 ```
 
-###
 
 ```{r prob11-4, echo = FALSE}
 question_radio(
@@ -1675,7 +1613,6 @@ question_radio(
 )
 ```
 
-###
 
 ```{r prob11-5, echo = FALSE}
 question_radio(
@@ -1689,11 +1626,10 @@ question_radio(
 )
 ```
 
-###
 
 ```{r prob11-6, echo = FALSE}
 question_radio(
-  "Do we know the population standard deviation(s), $\\sigma$, for difference in temperature?",
+  "Do we know the population standard deviation(s) $\\sigma$ for difference in temperature?",
   answer("Yes, the population standard deviations are known.", message = "Oops. We are presented with a standard deviation in temperature differences but that standard deviation belongs only to the sample temperatures measured, not the population."),
   answer("No, the population standard deviations are not known.", correct = TRUE),
   allow_retry = TRUE,
@@ -1701,11 +1637,10 @@ question_radio(
 )
 ```
 
-###
 
 ```{r prob11-7, echo = FALSE}
 question_radio(
-  "Are the observations in the two groups (males on Death Row and females on Death Row) paired?",
+  "Are the observations in the two groups (temperature readings from 1968 and temperature readings from 2008) paired?",
   answer("No. There is no reason to suggest that the individual 1968 and 2008 temperature readings correspond to one another."),
   answer("Yes. Every temperature reading from 1968 can be naturally paired with the 2008 reading from the same location.", correct = TRUE),
   allow_retry = TRUE,
@@ -1713,7 +1648,7 @@ question_radio(
 )
 ```
 
-###
+
 
 ```{r prob11-8, echo = FALSE}
 quiz(
@@ -1755,7 +1690,6 @@ grade_result(
 )
 ```
 
-###
 
 Use the code block below to input or compute the null value.
 ```{r prob11-10, exercise = TRUE}
@@ -1768,7 +1702,6 @@ grade_result(
 )
 ```
 
-###
 
 Use the code block below to input or compute the standard error.
 ```{r prob11-11, exercise = TRUE}
@@ -1781,7 +1714,6 @@ grade_result(
 )
 ```
 
-###
 
 Use the code block below to input or compute the test statistic.
 ```{r prob11-12, exercise = TRUE}
@@ -1794,7 +1726,6 @@ grade_result(
 )
 ```
 
-###
 
 Use the code block below to compute the $p$-value associated with this test.
 ```{r prob11-13, exercise = TRUE}
@@ -1807,7 +1738,6 @@ grade_result(
 )
 ```
 
-###
 
 Answer the following to complete the hypothesis test.
 
@@ -1835,11 +1765,12 @@ quiz(
 )
 ```
 
+
+
 ## Problem 12
 
 **Problem 12:** A recent claim from Irving states that their average gasoline prices across the nation are \$2.10 per gallon. A random sample of 15 Irving stations throughout Manchester, NH reveals an average price per gallon of \$2.03 with a standard deviation of \$0.025. construct a 90% confidence interval for the average price per gallon of gas in Manchester, NH. Comment on your result.
 
-###
 
 ```{r prob12-1, echo = FALSE}
 question_radio(
@@ -1853,7 +1784,6 @@ question_radio(
 )
 ```
 
-###
 
 ```{r prob12-2, echo = FALSE}
 question_radio(
@@ -1867,11 +1797,10 @@ question_radio(
 )
 ```
 
-###
 
 ```{r prob12-3, echo = FALSE}
 question_radio(
-  "Is your confidence interval being build to capture a mean ($\\mu$), a proportion ($p$), or something else?",
+  "Is your confidence interval being build to capture a mean $\\mu$, a proportion $p$, or something else?",
   answer("A mean or difference in means", correct = TRUE),
   answer("A proportion or difference in proportions"),
   answer("Something else altogether"),
@@ -1880,7 +1809,6 @@ question_radio(
 )
 ```
 
-###
 
 ```{r prob12-4, echo = FALSE}
 question_radio(
@@ -1893,17 +1821,17 @@ question_radio(
 )
 ```
 
-###
 
 ```{r prob12-5, echo = FALSE}
 question_radio(
-  "Is the population standard deviation, $\\sigma$, for gas prices known?",
+  "Is the population standard deviation $\\sigma$ for gas prices known?",
   answer("Yes, the population standard deviation in gas prices is known."),
   answer("No, the population standard deviation in gas prices is not known.", correct = TRUE),
   allow_retry = TRUE,
   random_answer_order = TRUE
 )
 ```
+
 
 ```{r prob12-6, echo = FALSE}
 quiz(
@@ -1945,7 +1873,6 @@ grade_result(
 )
 ```
 
-###
 
 Use the code block below to input or compute the point estimate.
 ```{r prob12-8, exercise = TRUE}
@@ -1958,7 +1885,6 @@ grade_result(
 )
 ```
 
-###
 
 Use the code block below to input or compute the standard error.
 ```{r prob12-9, exercise = TRUE}
@@ -1971,7 +1897,6 @@ grade_result(
 )
 ```
 
-###
 
 Use the code block below to compute the lower bound for our confidence interval.
 ```{r prob12-10, exercise = TRUE}
@@ -1984,7 +1909,6 @@ grade_result(
 )
 ```
 
-###
 
 Use the code block below to compute the upper bound for our confidence interval.
 ```{r prob12-11, exercise = TRUE}
@@ -2022,9 +1946,9 @@ learnrhash::encoder_ui(
   ui_before = shiny::div(
     "If you have completed this tutorial and are happy with all of your",
     "solutions, please click the button below to generate your hash and",
-    "enter it on this week's Google Form in Blackboard.",
+    "enter it in the appropriate hash assignment in MyOpenMath.",
     shiny::tags$br()
   ), 
-  ui_after = shiny::tags$a(href = "https://blackboard.mville.edu", "Blackboard")
+  ui_after = shiny::tags$a(href = "https://myopenmath.com", "MyOpenMath")
 )
 ```
